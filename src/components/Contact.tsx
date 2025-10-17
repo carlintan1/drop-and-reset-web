@@ -35,19 +35,19 @@ const Contact = () => {
     <section id="contact" className="py-24 bg-accent">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl sm:text-5xl font-display font-bold text-foreground mb-4 uppercase tracking-tight">
             Join Our Community
           </h2>
-          <p className="text-lg text-foreground/70">
+          <p className="text-lg text-foreground/80">
             Get in touch and start your pickleball journey
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <Card>
+          <Card className="rounded-3xl shadow-md">
             <CardHeader>
-              <CardTitle>Send us a message</CardTitle>
+              <CardTitle className="font-display">Send us a message</CardTitle>
               <CardDescription>
                 Fill out the form below and we'll get back to you shortly
               </CardDescription>
@@ -127,7 +127,7 @@ const Contact = () => {
             </div>
 
             {/* Map Embed */}
-            <div className="rounded-2xl overflow-hidden h-64">
+            <div className="rounded-3xl overflow-hidden h-64 shadow-md">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.6!2d-117.1611!3d32.7157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDQyJzU2LjUiTiAxMTfCsDA5JzQwLjAiVw!5e0!3m2!1sen!2sus!4v1234567890"
                 width="100%"

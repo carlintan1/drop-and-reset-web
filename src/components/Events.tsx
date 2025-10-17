@@ -31,35 +31,37 @@ const Events = () => {
     <section id="events" className="py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl sm:text-5xl font-display font-bold text-foreground mb-4 uppercase tracking-tight">
             Upcoming Events
           </h2>
-          <p className="text-lg text-foreground/70">
+          <p className="text-lg text-foreground/80">
             Mark your calendar and join us on the court
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {upcomingEvents.map((event) => (
-            <Card key={event.title} className="hover:shadow-lg transition-shadow duration-300">
-              <CardHeader>
-                <CardTitle className="text-xl mb-2">{event.title}</CardTitle>
-                <CardDescription>{event.description}</CardDescription>
+            <Card key={event.title} className="hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 rounded-3xl shadow-md overflow-hidden">
+              <CardHeader className="bg-gradient-to-br from-primary/10 to-secondary/20 pb-6">
+                <CardTitle className="text-xl font-display font-bold mb-2 uppercase tracking-wide">{event.title}</CardTitle>
+                <CardDescription className="text-sm">{event.description}</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="flex items-center gap-3 text-sm text-foreground/70">
-                  <Calendar className="h-4 w-4 text-primary" />
-                  <span>{event.date}</span>
+              <CardContent className="space-y-4 pt-6">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3 text-sm text-foreground/80 bg-accent/50 rounded-xl p-3">
+                    <Calendar className="h-5 w-5 text-primary flex-shrink-0" />
+                    <span className="font-medium">{event.date}</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-foreground/80 bg-accent/50 rounded-xl p-3">
+                    <Clock className="h-5 w-5 text-primary flex-shrink-0" />
+                    <span className="font-medium">{event.time}</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-foreground/80 bg-accent/50 rounded-xl p-3">
+                    <MapPin className="h-5 w-5 text-primary flex-shrink-0" />
+                    <span className="font-medium">{event.location}</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-3 text-sm text-foreground/70">
-                  <Clock className="h-4 w-4 text-primary" />
-                  <span>{event.time}</span>
-                </div>
-                <div className="flex items-center gap-3 text-sm text-foreground/70">
-                  <MapPin className="h-4 w-4 text-primary" />
-                  <span>{event.location}</span>
-                </div>
-                <Button className="w-full mt-4 rounded-full" variant="outline">
+                <Button className="w-full mt-4 rounded-full font-semibold uppercase tracking-wider" variant="outline">
                   Register
                 </Button>
               </CardContent>

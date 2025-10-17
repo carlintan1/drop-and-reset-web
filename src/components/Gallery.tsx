@@ -19,10 +19,10 @@ const Gallery = () => {
     <section id="gallery" className="py-24 bg-accent">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl sm:text-5xl font-display font-bold text-foreground mb-4 uppercase tracking-tight">
             Community in Action
           </h2>
-          <p className="text-lg text-foreground/70">
+          <p className="text-lg text-foreground/80">
             Moments from our courts and events
           </p>
         </div>
@@ -31,7 +31,7 @@ const Gallery = () => {
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className="aspect-square overflow-hidden rounded-2xl hover:scale-105 transition-transform duration-300"
+              className="aspect-square overflow-hidden rounded-3xl hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-xl"
             >
               <img
                 src={image.src}
